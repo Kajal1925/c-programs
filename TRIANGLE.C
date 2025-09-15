@@ -1,11 +1,11 @@
 #include<stdio.h>
 void main(){
-float angle_1,angle_2,angle_3,sum;
-printf("Enter the angles of the triangles :\n");
-scanf("%f%f%f",&angle_1,&angle_2,&angle_3);
-sum=angle_1+angle_2+angle_3;
-if(sum==180&&angle_1>0&&angle_2>0&&angle_3>0){
-printf("The triangle is VALID \n");}
-else{
-printf("The triangle is NOT Valid \n");}
+int side_1,side_2,side_3;
+printf("Enter the sides of the triangle:\n");
+scanf("%d%d%d",&side_1,&side_2,&side_3);
+if(side_1==side_2&&side_2==side_3){
+printf("The triangle is an EQUILATERAL triangle\n");}
+else if(side_1==side_2||side_2==side_3||side_1==side_3){
+printf("The triangle is an ISOSCELES triangle\n");}
+else{printf("The triangle is a SCALENE triangle\n");}
 getch();}
